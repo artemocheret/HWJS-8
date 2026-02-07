@@ -23,12 +23,28 @@ const cards = [
   "Карточка-5",
 ];
 
-cards.splice(2, 1);
-
 // 3 завдання
-cards.splice(5, 0, "Карточка-6");
+const cardToRemove = "Карточка-3";
+
+const indexOfCardToRemove = cards.indexOf(cardToRemove);
+cards.splice(indexOfCardToRemove, 1);
+
+console.log(cards);
 
 // 4 завдання
-cards.splice(2, 1, "Карточка-7");
+const CardToInsert = "Карточка-6";
+
+const indexOfCardToInsert = cards.indexOf(cards[cards.length - 1]);
+cards.splice(indexOfCardToInsert + 1, 0, CardToInsert);
+
+console.log(cards);
+
+// 5 завдання
+const CardToUpdate = "Карточка-4";
+const newValue = "Оновлена карточка-4";
+
+const indexOfCardToUpdate = cards.indexOf(CardToUpdate);
+
+cards.splice(indexOfCardToUpdate, 1, newValue);
 
 console.log(cards);
