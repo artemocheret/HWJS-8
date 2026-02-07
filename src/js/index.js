@@ -34,7 +34,7 @@ console.log(cards);
 // 4 завдання
 const CardToInsert = "Карточка-6";
 
-const indexOfCardToInsert = cards.indexOf(cards[cards.length - 1]);
+const indexOfCardToInsert = cards.length; 
 cards.splice(indexOfCardToInsert + 1, 0, CardToInsert);
 
 console.log(cards);
